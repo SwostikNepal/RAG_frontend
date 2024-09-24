@@ -7,7 +7,7 @@
 }
 
 h1 {
-    text-align: center;               /* Center the main title */
+    text-align: left;               /* Center the main title */
     color: #333;                      /* Dark text color */
     margin-bottom: 30px;             /* Space below the title */
 }

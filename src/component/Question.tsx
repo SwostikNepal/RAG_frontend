@@ -25,12 +25,7 @@ function MessageBox() {
                 },
                 body: JSON.stringify({ question: message }),  // Wrap message in an object
             });
-    
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.detail || 'Network response was not ok');
-            }
-    
+      
             const data = await response.json();
             setAnswer(data.answer);
             setError('');
@@ -39,10 +34,7 @@ function MessageBox() {
             setError('Error querying document.');
             setAnswer('');
         }
-    };
-    
-    
-    
+    }; 
     
 
     return (

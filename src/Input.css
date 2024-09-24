@@ -1,0 +1,13 @@
+
+.app-container {
+    font-family: 'Arial', sans-serif; /* Example font */
+    background-color: #f4f4f4;        /* Light gray background */
+    min-height: 100vh;                /* Full height */
+    padding: 20px;                    /* Padding around the app */
+}
+
+h1 {
+    text-align: center;               /* Center the main title */
+    color: #333;                      /* Dark text color */
+    margin-bottom: 30px;             /* Space below the title */
+}

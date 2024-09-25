@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-
+import '../Input.css'; 
 function MessageBox() {
     const [message, setMessage] = useState<string>('');
     const [answer, setAnswer] = useState<string>('');
     const [error, setError] = useState<string>('');
 
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setMessage(event.target.value);
+        setMessage(event.target.value); //gets the text that has been typed in the textarea.
     };
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -22,8 +22,8 @@ function MessageBox() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ question: message }),  // Wrap message in an object
+                },//stating the server that it is being sent JSON.
+                body: JSON.stringify({ question: message }),  // Convert the user's question to a JSON string
             });
       
             const data = await response.json();
@@ -40,10 +40,10 @@ function MessageBox() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="messageInput"><h2>Ask your question</h2></label>
+                <div >
+                    <h2>Ask your question</h2>
                     <textarea
-                        id="messageInput"
+                        
                         className="form-control"
                         rows={4}
                         value={message}
@@ -51,6 +51,7 @@ function MessageBox() {
                         placeholder="Type your question here..."
                     />
                 </div>
+                <br></br>
                 <button type="submit" className="btn btn-primary">Send</button>
             </form>
 

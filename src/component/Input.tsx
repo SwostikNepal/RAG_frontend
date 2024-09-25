@@ -63,7 +63,7 @@ function Input() {
                 />
             </div>
             <br></br>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-success">
                 {buttonText}
             </button>
             {uploadMessage && <p>{uploadMessage}</p>}
